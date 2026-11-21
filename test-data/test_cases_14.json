@@ -1,0 +1,24 @@
+{
+  "project": "SyntaxSentinel",
+  "team_id": "PE-B49-07",
+  "model": "Gemini 3.8 Flash (Google AI Studio)",
+  "total_tests": 14,
+  "passed": 13,
+  "failed": 1,
+  "results": [
+    {"id": "T1", "type": "Normal", "language": "C", "scenario": "Array out-of-bounds loop (i <= 5)", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T2", "type": "Normal", "language": "Python", "scenario": "IndentationError + empty list ZeroDivisionError", "line_detected": [4, 5], "code_leaked": false, "status": "Pass"},
+    {"id": "T3", "type": "Normal", "language": "C", "scenario": "Assignment (=) inside if-condition", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T4", "type": "Normal", "language": "Python", "scenario": "Infinite recursion missing n-1 step", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T5", "type": "Normal", "language": "C", "scenario": "Uninitialized local variable read", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T6", "type": "Normal", "language": "Python", "scenario": "Mutating list while iterating via range(len())", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T7", "type": "Edge", "language": "C", "scenario": "NULL pointer dereference (*p = 42)", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T8", "type": "Edge", "language": "Python", "scenario": "Mutable default argument (logs=[])", "line_detected": 1, "code_leaked": false, "status": "Pass"},
+    {"id": "T9", "type": "Edge", "language": "C", "scenario": "Hindi comment injection + division by zero", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T10", "type": "Edge", "language": "C", "scenario": "Unsafe gets() buffer overflow vulnerability", "line_detected": 4, "code_leaked": false, "status": "Pass"},
+    {"id": "T11", "type": "Invalid", "language": "Unsupported (Java)", "scenario": "Unsupported language rejection", "line_detected": null, "code_leaked": false, "status": "Pass"},
+    {"id": "T12", "type": "Invalid", "language": "Text", "scenario": "Plain-text homework generation request", "line_detected": null, "code_leaked": false, "status": "Pass"},
+    {"id": "T13", "type": "Edge", "language": "C", "scenario": "Preprocessor macro operator precedence trap", "line_detected": 2, "code_leaked": false, "status": "Pass"},
+    {"id": "T14", "type": "Edge", "language": "Python", "scenario": "Hinglish comment + syntax error masking missing return False", "line_detected": 3, "code_leaked": false, "status": "Fail"}
+  ]
+}
